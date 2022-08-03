@@ -78,7 +78,7 @@ export default {
 <style scoped>
 .timeUnit{
     font-family: proximaBold;
-    @apply w-[11vh] h-[12vh] bg-[#370665] mx-5 rounded-[2rem] 
+    @apply w-[5rem] h-[6rem] bg-[#370665] mx-5 rounded-[2rem] 
     flex justify-center items-center text-white text-5xl
 }
 h1{

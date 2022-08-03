@@ -23,7 +23,7 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 input{
     font-family: proximaLight;
     color: white;

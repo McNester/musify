@@ -1,16 +1,28 @@
 <template>
   <div class="overflow-hidden">
 
+    
     <MyNavbar @explore="goToTrendsSection" @home="goToHeroSection" @contact="goToContactSection"></MyNavbar>
 
     <section ref="hero" id="heroSection">
+
+      <div class="flex justify-end items-end w-[100vw] h-[100vh] absolute">
+        <img class="hidden lg:block scale-[0.7] absolute -z-50 -mr-[8.3rem] mb-10" src="/imgSrc/heroPersonBack.png">
+      </div>
+
       <h1 class="hero heroTitle">
         Let’s Dive in <br> <span id="orange" class="hero heroTitle">Music</span> World
       </h1>
 
-      <h2 id="slogan" class="heroSlogan">
+      <h2 id="slogan" class="heroSlogan lg:hidden">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, phasellus
       </h2>
+
+      <h2 id="slogan" class="heroSlogan hidden lg:block">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra, phasellus imperdiet fringilla turpis lectus risus erat. Commodo purus, eu sed suspendisse fermentum
+      </h2>
+
+      
 
       <div class="flex w-full justify-start items-center">
         <MyFilledBtn>Shop now</MyFilledBtn>
@@ -37,33 +49,43 @@
         </MyUnfilledBtn>
       </div>
 
-      <div class="grid grid-cols-3 gap-[15rem] py-7 overflow-y-hidden overflow-x-scroll w-screen -ml-5">
-          <MyHeadphonesCard></MyHeadphonesCard>
-          <MyHeadphonesCard></MyHeadphonesCard>
-          <MyHeadphonesCard></MyHeadphonesCard>
+      <div 
+      class="flex flex-col justify-center items-center gap-10 pb-10 
+      lg:flex-row-reverse lg:justify-around lg:w-screen">
+      
+        <div class="grid grid-cols-3 gap-[15rem] 
+        py-7 overflow-y-hidden overflow-x-scroll w-screen -ml-5
+        md:py-20 lg:gap-0 lg:w-[59vw] lg:overflow-hidden lg:py-0 lg:mb-10">
+            <MyHeadphonesCard></MyHeadphonesCard>
+            <MyHeadphonesCard></MyHeadphonesCard>
+            <MyHeadphonesCard></MyHeadphonesCard>
+        </div>
+
+        <button @click="goToTrendsSection" 
+        class="self-center -ml-5 animate-bounce lg:animate-none flex justify-center items-center transition-all ease-in-out
+        sm:mb-[10%] sm:mt-[10%] 
+        lg:mt-[13rem] lg:hover:scale-105 lg:active:scale-100 lg:w-1/3 ">
+          <svg class="scale-90 sm:scale-[1.2]" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_34_1142)">
+            <circle cx="38" cy="36" r="29.5" stroke="#1E1E1E"/>
+            <path d="M38 52L43.7735 42L32.2265 42L38 52ZM37 20L37 43L39 43L39 20L37 20Z" fill="#1E1E1E"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_34_1142" x="0" y="0" width="76" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="4"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_34_1142"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_34_1142" result="shape"/>
+            </filter>
+            </defs>
+          </svg>
+        </button>
+
       </div>
-
-      <button @click="goToTrendsSection" class="self-center -ml-10 animate-bounce">
-        <svg class="scale-90" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_34_1142)">
-          <circle cx="38" cy="36" r="29.5" stroke="#1E1E1E"/>
-          <path d="M38 52L43.7735 42L32.2265 42L38 52ZM37 20L37 43L39 43L39 20L37 20Z" fill="#1E1E1E"/>
-          </g>
-          <defs>
-          <filter id="filter0_d_34_1142" x="0" y="0" width="76" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-          <feOffset dy="2"/>
-          <feGaussianBlur stdDeviation="4"/>
-          <feComposite in2="hardAlpha" operator="out"/>
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/>
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_34_1142"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_34_1142" result="shape"/>
-          </filter>
-          </defs>
-        </svg>
-      </button>
-
 
     </section>
 
@@ -227,10 +249,10 @@ html{
   font-family: proximaLight;
 }
 .heroSlogan{
-  @apply text-xl text-left w-[90%] text-[#282828]
+  @apply text-xl text-left w-[90%] text-[#282828]/50 lg:w-[35rem]
 }
 #heroSection{
-  @apply flex flex-col ml-5 gap-5 items-start justify-center w-screen mt-20
+  @apply flex flex-col ml-5 gap-5 items-start justify-center w-screen mt-20 lg:mt-48 lg:relative
 }
 #heroUnfilledBtn{
   font-family: proximaBold;
@@ -238,7 +260,7 @@ html{
 }
 #trendsTitle{
   font-family: proximaBold;
-  @apply text-5xl
+  @apply text-5xl md:text-6xl
 }
 
 #buySection{
@@ -250,12 +272,14 @@ html{
 }
 #offerTitle{
   font-family: proximaBold;
-  @apply text-5xl mt-20
+  @apply text-5xl mt-20 md:text-6xl
 }
 #discount{
   font-family: proximaBold;
-  @apply h-[16vh] w-[16vh] bg-[#370665] absolute rounded-[100rem] flex justify-center items-center text-white
-  text-4xl text-center shadow-2xl
+  @apply h-[7rem] w-[7rem] bg-[#370665] 
+  absolute rounded-[100rem] flex justify-center items-center text-white
+  text-4xl text-center shadow-2xl 
+  
 }
 #timerOffer{
   font-family: proxima;
@@ -271,10 +295,10 @@ html{
 
 #otherAccessories{
   font-family: proximaBold;
-  @apply flex flex-col justify-center items-center text-4xl text-center gap-10
+  @apply flex flex-col justify-center items-center text-4xl text-center gap-10 md:text-5xl
 }
 #otherAccessories img{
-  @apply scale-90 hover:scale-95 active:scale-90 cursor-pointer
+  @apply scale-90 hover:scale-95 active:scale-90 cursor-pointer transition-all ease-in-out
 }
 #accessoriesContainer{
    @apply grid justify-center items-center md:grid-cols-2

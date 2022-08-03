@@ -35,6 +35,6 @@ export default {
 <style scoped>
 h1{
     font-family: proxima;
-    @apply p-1 text-xl pl-5 hover:scale-105 cursor-pointer active:scale-100
+    @apply p-1 text-xl pl-5 hover:scale-105 cursor-pointer active:scale-100 md:text-4xl
 }
 </style>
