@@ -68,9 +68,9 @@ li{
     font-family: proximaBold;
 }
 #btnFirst{
-    @apply scale-[0.70] absolute left-0 top-0 hover:scale-[0.75] active:scale-[0.70]
+    @apply scale-[0.70] absolute left-0 top-0 hover:scale-[0.75] active:scale-[0.70] xl:gap-2 xl:text-xl
 }
 #btnSecond{
-    @apply scale-[0.70] absolute right-0 top-0 ml-10 hover:scale-[0.75] active:scale-[0.70] shadow-[#F14A16] shadow-[0px_0px_50px_-5px]
+    @apply scale-[0.70] absolute right-0 top-0 ml-10 hover:scale-[0.75] active:scale-[0.70] shadow-[#F14A16] shadow-[0px_0px_50px_-5px] xl:text-xl
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col justify-between relative h-[68vh] w-[90vw]
+    <div class="flex flex-col justify-between relative h-[72vh] w-[70vw]
     items-center bg-gradient-to-r from-[#370665] to-[#35589A] rounded-[1.8rem]
-    md:flex-row md:h-[20rem] md:items-end">
-        <img src="/imgSrc/qr.png" class="scale-[0.4] absolute origin-top mt-10 md:origin-center md:scale-[0.6] md:-ml-10">
+    md:flex-row md:h-[20rem] md:items-end md:w-[90vw] xl:w-[70vw]">
+        <img src="/imgSrc/qr.png" class="scale-[0.4] absolute origin-top mt-10 md:origin-center md:scale-[0.6] md:-ml-10 xl:scale-75 lg:ml-5 lg:origin-center lg:mt-4">
 
         <div class="flex flex-col justify-between items-center relative md:ml-auto md:mb-10 md:-mr-10">
             <h1 id="scan">Scan QR code for more</h1>

@@ -6,8 +6,9 @@
 
     <section ref="hero" id="heroSection">
 
-      <div class="flex justify-end items-end w-[100vw] h-[100vh] absolute">
-        <img class="hidden lg:block scale-[0.7] absolute -z-50 -mr-[8.3rem] mb-10" src="/imgSrc/heroPersonBack.png">
+      <img class="absolute -z-50 scale-[0.66] hidden lg:flex origin-top-right xl:scale-[0.76] xl:ml-[28.2vw] xl:mb-[18vh]" src="/imgSrc/heroPersonBack.png">
+      <div class=" hidden xl:block w-[60vw] h-[3rem] bg-white blur-sm -z-40 absolute ml-[40rem] mt-[26rem]">
+
       </div>
 
       <h1 class="hero heroTitle">
@@ -28,7 +29,9 @@
         <MyFilledBtn>Shop now</MyFilledBtn>
         <MyUnfilledBtn id="heroUnfilledBtn">
           
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg 
+          class="xl:scale-[1.4]"
+          width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0_34_1115" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="23" height="22">
           <rect x="0.502441" y="0.197327" width="21.5247" height="21.5247" fill="url(#pattern0)"/>
           </mask>
@@ -55,7 +58,7 @@
       
         <div class="grid grid-cols-3 gap-[15rem] 
         py-7 overflow-y-hidden overflow-x-scroll w-screen -ml-5
-        md:py-20 lg:gap-0 lg:w-[59vw] lg:overflow-hidden lg:py-0 lg:mb-10">
+        md:py-20 lg:gap-0 lg:w-[59rem] lg:overflow-hidden lg:py-0 lg:mb-10">
             <MyHeadphonesCard></MyHeadphonesCard>
             <MyHeadphonesCard></MyHeadphonesCard>
             <MyHeadphonesCard></MyHeadphonesCard>
@@ -94,7 +97,7 @@
            w-screen">
       <h1 id="trendsTitle">Popular trends</h1>
 
-      <div class="grid grid-cols-5 gap-[15rem] py-7 overflow-y-hidden overflow-x-scroll w-screen pl-5">
+      <div class="grid grid-cols-5 gap-[15rem] py-7 overflow-y-hidden overflow-x-scroll w-screen pl-5 xl:pl-12 xl:py-20 xl:gap-[25rem]">
          <MyTrendsHeadphonesCard></MyTrendsHeadphonesCard>
          <MyTrendsHeadphonesCard></MyTrendsHeadphonesCard>
          <MyTrendsHeadphonesCard></MyTrendsHeadphonesCard>
@@ -110,20 +113,22 @@
 
     <section v-if="isOfferActive" id="offerSection">
       <h1 id="offerTitle">Exclusive offer</h1>
-      <div class="relative">
-        <div id="discount">
-          <h1>20% <br>off</h1>
-        </div>
-        <img src="/imgSrc/offerHeadphones.png" class="">
-      </div>
-
-      <div id="timerOffer">
-          <h1>Offer ends in</h1>
-          <MyTimer @offerEnd="removeOfferSection"></MyTimer>
-          <div class="flex justify-between items-center w-full">
-            <MyUnfilledBtn id="offerDetails">View deatails</MyUnfilledBtn>
-            <MyFilledBtn id="offerShop">Shop now</MyFilledBtn>
+      <div class="flex justify-center items-center gap-10 flex-col lg:flex-row lg:w-screen lg:justify-between xl:w-[90%]">
+        <div class="relative lg:scale-150 lg:ml-[5rem] lg:mb-[6rem] xl:scale-[1.8] xl:mb-[10rem]">
+          <div id="discount">
+            <h1>20% <br>off</h1>
           </div>
+          <img src="/imgSrc/offerHeadphones.png" class="">
+        </div>
+
+        <div id="timerOffer">
+            <h1>Offer ends in</h1>
+            <MyTimer @offerEnd="removeOfferSection"></MyTimer>
+            <div class="flex justify-between items-center w-full">
+              <MyUnfilledBtn id="offerDetails">View deatails</MyUnfilledBtn>
+              <MyFilledBtn id="offerShop">Shop now</MyFilledBtn>
+            </div>
+        </div>
       </div>
     </section>
 
@@ -140,7 +145,7 @@
     <section id="arrivalsSection">
       <h1 id="trendsTitle">New Arrivals</h1>
 
-      <div class="grid grid-cols-3 gap-[20rem] py-7 overflow-y-hidden overflow-x-scroll w-screen pl-5 mr-5">
+      <div class="grid grid-cols-3 gap-[20rem] py-7 overflow-y-hidden overflow-x-scroll w-screen pl-5 mr-5 xl:gap-[5rem] xl:w-fit">
         <MyArrivalsCard>
           <img src="/imgSrc/arrivalOne.png" class="scale-[1]">
         </MyArrivalsCard>
@@ -240,7 +245,7 @@ html{
   font-family: proximaBold;
 }
 .heroTitle{
-  @apply text-6xl text-left w-screen
+  @apply text-6xl text-left w-screen xl:text-8xl
 }
 #orange{
   color: #F14A16;
@@ -249,7 +254,7 @@ html{
   font-family: proximaLight;
 }
 .heroSlogan{
-  @apply text-xl text-left w-[90%] text-[#282828]/50 lg:w-[35rem]
+  @apply text-xl text-left w-[90%] text-[#282828]/50 lg:w-[30rem] xl:text-2xl
 }
 #heroSection{
   @apply flex flex-col ml-5 gap-5 items-start justify-center w-screen mt-20 lg:mt-48 lg:relative
@@ -260,11 +265,11 @@ html{
 }
 #trendsTitle{
   font-family: proximaBold;
-  @apply text-5xl md:text-6xl
+  @apply text-5xl md:text-6xl xl:mb-20
 }
 
 #buySection{
-  @apply flex justify-center items-center mt-10
+  @apply flex justify-center items-center mt-10 xl:mt-32
 }
 
 #offerSection{
@@ -272,18 +277,18 @@ html{
 }
 #offerTitle{
   font-family: proximaBold;
-  @apply text-5xl mt-20 md:text-6xl
+  @apply text-5xl mt-20 md:text-6xl lg:self-end xl:mr-[5%]
 }
 #discount{
   font-family: proximaBold;
   @apply h-[7rem] w-[7rem] bg-[#370665] 
   absolute rounded-[100rem] flex justify-center items-center text-white
-  text-4xl text-center shadow-2xl 
+  text-4xl text-center shadow-2xl
   
 }
 #timerOffer{
   font-family: proxima;
-  @apply flex flex-col text-4xl justify-center items-center gap-5
+  @apply flex flex-col text-4xl justify-center items-center gap-5 lg:mr-4 lg:gap-12 xl:scale-150
 }
 #offerDetails{
   font-family: proximaLight;
@@ -295,16 +300,16 @@ html{
 
 #otherAccessories{
   font-family: proximaBold;
-  @apply flex flex-col justify-center items-center text-4xl text-center gap-10 md:text-5xl
+  @apply flex flex-col justify-center items-center text-4xl text-center gap-10 md:text-5xl xl:gap-36 xl:mt-20
 }
 #otherAccessories img{
-  @apply scale-90 hover:scale-95 active:scale-90 cursor-pointer transition-all ease-in-out
+  @apply scale-90 hover:scale-95 active:scale-90 cursor-pointer transition-all ease-in-out xl:scale-150 xl:hover:scale-[1.55] xl:active:scale-150
 }
 #accessoriesContainer{
-   @apply grid justify-center items-center md:grid-cols-2
+   @apply grid justify-center items-center md:grid-cols-2 xl:gap-y-[8rem] xl:gap-x-[15rem]
 }
 #arrivalsSection{
-  @apply flex justify-center items-center flex-col mx-auto w-screen mt-10
+  @apply flex justify-center items-center flex-col mx-auto w-screen mt-10 xl:mt-60
 }
 
 #qrSection{

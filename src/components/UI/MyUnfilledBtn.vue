@@ -1,5 +1,9 @@
 <template>
-    <button class="flex justify-around gap-2 items-center bg-transparent border-[3px] border-[#F14A16] p-[0.6rem] px-4 rounded-3xl text-[#F14A16] hover:scale-105 transition-all ease-in-out active:scale-100">
+    <button 
+    class="flex justify-around gap-2 items-center 
+    bg-transparent border-[3px] border-[#F14A16] p-[0.6rem] px-4 
+    rounded-3xl text-[#F14A16] hover:scale-105 transition-all 
+    ease-in-out active:scale-100 xl:text-3xl xl:gap-5">
         <slot></slot>
     </button>
 </template>

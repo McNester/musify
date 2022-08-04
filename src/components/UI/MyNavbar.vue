@@ -89,7 +89,7 @@ img{
     @apply transition-all ease-in-out;
 }
 #login{
-    @apply hidden lg:block transition-all ease-linear hover:bg-[#F14A16] hover:text-white rounded-2xl px-10 border-[2px]
+    @apply hidden lg:block transition-all ease-linear hover:bg-[#F14A16] hover:text-white rounded-2xl px-10 border-[2px] xl:text-sm
 }
 
     

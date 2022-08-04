@@ -11,7 +11,7 @@
         class="flex flex-col items-start justify-end w-11/12 h-1/2 
         bg-[#282828] bg-opacity-70 px-2 rounded-[1.2rem]
         shadow-[#000000] shadow-[0px_10px_20px_-10px]
-        lg:bg-transparent lg:shadow-none lg:border-white lg:border-[0.001rem] lg:backdrop-blur-sm">
+        lg:bg-transparent lg:shadow-none lg:border-white lg:border-[0.001rem] lg:backdrop-blur-sm xl:backdrop-blur-md">
             <h1>
                 Wireless Headphones
             </h1>

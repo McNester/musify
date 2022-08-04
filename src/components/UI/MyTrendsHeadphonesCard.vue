@@ -1,5 +1,5 @@
 <template >
-    <div class=" flex flex-col bg-[#282828] rounded-[2rem] justify-start items-center w-[12rem] h-[25rem]">
+    <div class=" flex flex-col bg-[#282828] rounded-[2rem] justify-start items-center w-[12rem] h-[25rem] xl:scale-125">
         <img src="/imgSrc/trendsHeadphones.png" class="">
         <div class="flex flex-col justify-start bg-[#282828] rounded-b-[2rem]">
             <h1 class="text-sm ml-3">
@@ -68,9 +68,9 @@ li{
     font-family: proximaBold;
 }
 #btnFirst{
-    @apply scale-[0.55] absolute left-0 top-0 hover:scale-[0.6] active:scale-[0.55]
+    @apply scale-[0.55] absolute left-0 top-0 hover:scale-[0.6] active:scale-[0.55] xl:gap-2 xl:text-base
 }
 #btnSecond{
-    @apply scale-[0.55] absolute right-0 top-0 ml-10 hover:scale-[0.6] active:scale-[0.55] shadow-[#F14A16] shadow-[0px_0px_50px_-5px]
+    @apply scale-[0.55] absolute right-0 top-0 ml-10 hover:scale-[0.6] active:scale-[0.55] shadow-[#F14A16] shadow-[0px_0px_50px_-5px] xl:gap-2 xl:text-base
 }
 </style>
