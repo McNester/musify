@@ -17,7 +17,7 @@
         <img src="/imgSrc/logo.png" 
         class='scale-50 hover:scale-[0.60]
         md:scale-75 md:hover:scale-[0.80] 
-        lg:scale-[0.7] lg:hover:scale-110'>
+        lg:scale-[0.7] lg:hover:scale-[0.75]'>
 
         <MyTopNav @home="goToHome" @explore="goToExplore" @contact="goToContact"></MyTopNav>
 
