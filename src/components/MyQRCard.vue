@@ -10,7 +10,7 @@
 
             <div class="flex flex-col justify-center items-center md:flex-row md:w-[30%]">
                 <img src="/imgSrc/googlePlay.png" class="scale-[0.5] md:scale-[0.8] hover:scale-[0.55] active:scale-50 md:hover:scale-[0.85] md:active:scale-[0.8] cursor-pointer">
-                <img src="/imgSrc/appStore.png" class="scale-[0.5] md:scale-[o.8] -mt-20 md:-mt-0 hover:scale-[0.55] active:scale-50 md:hover:scale-[0.85] md:active:scale-[0.8] cursor-pointer">
+                <img src="/imgSrc/appStore.png" class="scale-[0.5] md:scale-[0.8] -mt-20 md:-mt-0 hover:scale-[0.55] active:scale-50 md:hover:scale-[0.85] md:active:scale-[0.8] cursor-pointer">
             </div>
         </div>
     </div>
